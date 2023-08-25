@@ -1,20 +1,19 @@
 .features
-    margin-top: 40px
     &-item
-        width: 49%
-        padding: 40px 70px 270px
+        width: calc( 50% - 5px )
+        padding: 40px 70px 300px
         position: relative
         background-color: #efefef
         &:hover
             img
-                transform: scale(1.2)
+                transform: scale(1.2) rotate(3deg)
 
     h4
         color: #1E1E44
-
         span
             font-size: 18px
             font-weight: 600
+
     p
         font-size: 16px
         font-style: normal
@@ -24,7 +23,7 @@
     &-img
         display: block
         width: 100%
-        height: 200px
+        height: 235px
         overflow: hidden
         position: absolute
         left: 0
@@ -35,9 +34,8 @@
             transition: .3 ease all
             display: block
             object-fit: cover
-            transition: all ease .3s
-            background-color: red
+            transition: all ease-in-out .6s
 
     .wrap
-        gap: 30px 2%
+        gap: 10px
         align-items: stretch

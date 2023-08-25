@@ -5,11 +5,16 @@
 @import 'footer'
 
 .main
-	padding: 100px 0
+	padding: 100px 0 0
 	position: relative
 	z-index: 1
 	&-content
+		position: static
+		z-index: unset
 		background: linear-gradient(180deg, #FFF 0%, #EEE 100%)
+		.container
+			position: relative
+			z-index: 1000
 
 	h1
 		max-width: 600px
@@ -35,33 +40,48 @@
 		position: absolute
 		top: 0
 		left: 0
-		z-index: -1
-		width: 100%
+		z-index: 1
+		width: 1100px
+		left: 50%
+		transform: translateX(-50%)
 		height: 100%
 		img
 			position: absolute
 			&:nth-of-type(1)
-				left: -10%
-				top: 5%
+				left: -40%
+				top: 8%
+				// background-color: red
 			&:nth-of-type(2)
-				left: 34%
-				top: -35%
+				left: 20%
+				top: -5%
+			&:nth-of-type(3)
+				width: 300px
+				left: 18%
+				top: 35%
+			&:nth-of-type(4)
+				right: -20%
+				top: 40%
 
 .info
-	padding: 100px 0
+	padding: 70px 0 0
 	position: relative
 	overflow: hidden
 	&::before
 		content: ''
 		display: block
-		width: 150%
-		height: 100vw
+		width: 100vw
+		height: 140%
 		position: absolute
-		bottom: 38%
+		bottom: 28%
 		transform: translateX(-50%)
 		left: 50%
 		border-radius: 50%
 		background-color: #EEE
+
+	.container
+		position: relative
+		z-index: 1000
+
 	h2
 		max-width: 460px
 		margin: 0 auto 50px
@@ -69,7 +89,7 @@
 		mark
 			display: block
 
-	.container 
+	.container
 		max-width: 1250px
 
 	.wrap
@@ -102,21 +122,22 @@
 			top: 0
 		&:nth-of-type(2)
 			left: 0
-			bottom: 30%
+			bottom: 38%
 		&:nth-of-type(3)
 			right: 8%
 			top: 0
 		&:nth-of-type(4)
 			right: 0
-			bottom: 30%
+			bottom: 38%
 
 .tag
-	background-color: #eaea6b
-	margin: 30px 0 0 0
+	background-color: #F7EB83
 	padding: 12px
 	border-radius: 8px
 	color: #222
-	font-size: 15px
+	font-size: 14px
+	font-style: normal
+	font-weight: 600
 
 .descr6
 	color: #181843
@@ -124,46 +145,45 @@
 	width: 100px
 	display: none
 
-.rezon
+.reazon
 	background-color: #f3f3f3
+	padding: 0
+	margin-bottom: 100px
+	.container
+		position: relative
+		top: 100px
+
 	.wrap
 		justify-content: start
 		gap: 15px
-	.d
-		display: flex
-		.d1
-			max-width: 60%
-			background-color: #eaea6b
-			img
-				max-width: 120%
-				height: 777px
-				object-fit: cover
-				position: relative
-				object-position: top right
+		margin-top: 25px
+
+	&-content
+		.heading
+			span
 				display: block
-				margin-left: -50px
-				margin-top: 10px
-		.d2
-			background-color: #fff
-			width: 70%
-			padding: 60px 100px
-			.df
-				display: flex
-				gap: 130px
-				.descr1
-					color: #181843
-					font-size: 35px
-					width: 100px
-					.span
-						color: #e0bdbd
-						font-size: 27px
-				.descr2
-					color: #181843
-					font-size: 20px
-	.descr7
-		color: #181843
-		font-size: 20px
-		display: none
+				color: #E1D4CD
+				font-size: 28px
+				font-style: normal
+				font-weight: 400
+				line-height: 22px
+				letter-spacing: 0.28px
+				text-transform: uppercase
+				&:nth-of-type(2)
+					ont-size: 33px
+					font-style: normal
+					font-weight: 800
+					line-height: 22px
+					letter-spacing: 0.33px
+					text-transform: uppercase
+				&:nth-of-type(3)
+					ont-size: 33px
+					font-style: normal
+					font-weight: 800
+					line-height: 22px
+					letter-spacing: 0.33px
+					text-transform: uppercase
+
 	ul
 		display: flex
 		flex-wrap: wrap
@@ -181,28 +201,33 @@
 				border-radius: 50%
 				background-color: #e0bdbd
 				margin-top: 8px
-	.texr
-		display: none
 
-hr
-	max-width: 791px
-	height: 1px
-	background-color: #E8E8E8
+	.simp
+		color: #762D1A
+		font-size: 15px
+		font-weight: 400
+		margin-top: 30px
 
-.simp
-	color: #762D1A
-	font-size: 15px
-	font-weight: 400
-	margin-top: 30px
+.buy
+	.content
+		background-color: #f3f3f3
+		border-left: 10px solid $prime
+		position: relative
+		z-index: 1
+		.wrap
+			margin: 0 auto 0 0
+			max-width: 67%
+			padding: 30px 55px
+			justify-content: flex-start
+			gap: 26px 28px
+			img
+				display: inline-block
 
-.ros
-	background-color: #f3f3f3
-	border-left: 10px solid orange
-	max-width: 1388px
-	.wrap1
-		padding: 41px 81px
-		img
-			padding: 30px 10px
+	&__img
+		position: absolute
+		right: 10px
+		bottom: 0
+		max-width: 350px
 
 @media screen and ( max-width: 1440px )
 	.ros
