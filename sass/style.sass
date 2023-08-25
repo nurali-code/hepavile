@@ -1,0 +1,336 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+@import 'vitamins'
+@import 'footer'
+
+.main
+	padding: 100px 0
+	position: relative
+	z-index: 1
+	&-content
+		background: linear-gradient(180deg, #FFF 0%, #EEE 100%)
+
+	h1
+		max-width: 600px
+
+	&__text
+		max-width: 600px
+		margin-bottom: 50px
+
+	&__img
+		position: absolute
+		right: 0
+		top: -50px
+		max-width: 600px
+
+	&__link
+		padding: 22px 30px
+		color: black
+		display: inline-block
+		&:hover
+			text-decoration: underline
+
+	&-bg
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		width: 100%
+		height: 100%
+		img
+			position: absolute
+			&:nth-of-type(1)
+				left: -10%
+				top: 5%
+			&:nth-of-type(2)
+				left: 34%
+				top: -35%
+
+.info
+	padding: 100px 0
+	position: relative
+	overflow: hidden
+	&::before
+		content: ''
+		display: block
+		width: 150%
+		height: 100vw
+		position: absolute
+		bottom: 38%
+		transform: translateX(-50%)
+		left: 50%
+		border-radius: 50%
+		background-color: #EEE
+	h2
+		max-width: 460px
+		margin: 0 auto 50px
+		text-align: center
+		mark
+			display: block
+
+	.container 
+		max-width: 1250px
+
+	.wrap
+		justify-content: center
+		position: relative
+		padding: 50px 0
+
+	&__img
+		display: block
+		max-width: 430px
+
+	p
+		display: flex
+		align-items: center
+		gap: 20px
+		border-radius: 10px
+		background: linear-gradient(88deg, #53D1E8 6.25%, #38C1DA 93.75%)
+		color: #fff
+		padding: 25px
+		max-width: 290px
+		font-size: 14px
+		font-weight: 500
+		margin: 0
+		position: absolute
+		img
+			width: 36px
+
+		&:first-of-type
+			left: 8%
+			top: 0
+		&:nth-of-type(2)
+			left: 0
+			bottom: 30%
+		&:nth-of-type(3)
+			right: 8%
+			top: 0
+		&:nth-of-type(4)
+			right: 0
+			bottom: 30%
+
+.tag
+	background-color: #eaea6b
+	margin: 30px 0 0 0
+	padding: 12px
+	border-radius: 8px
+	color: #222
+	font-size: 15px
+
+.descr6
+	color: #181843
+	font-size: 35px
+	width: 100px
+	display: none
+
+.rezon
+	background-color: #f3f3f3
+	.wrap
+		justify-content: start
+		gap: 15px
+	.d
+		display: flex
+		.d1
+			max-width: 60%
+			background-color: #eaea6b
+			img
+				max-width: 120%
+				height: 777px
+				object-fit: cover
+				position: relative
+				object-position: top right
+				display: block
+				margin-left: -50px
+				margin-top: 10px
+		.d2
+			background-color: #fff
+			width: 70%
+			padding: 60px 100px
+			.df
+				display: flex
+				gap: 130px
+				.descr1
+					color: #181843
+					font-size: 35px
+					width: 100px
+					.span
+						color: #e0bdbd
+						font-size: 27px
+				.descr2
+					color: #181843
+					font-size: 20px
+	.descr7
+		color: #181843
+		font-size: 20px
+		display: none
+	ul
+		display: flex
+		flex-wrap: wrap
+		margin-top: 60px
+		gap: 45px
+		li
+			width: 190px
+			color: #181843
+			font-size: 14px
+			&::before
+				content: ''
+				display: inline-block
+				width: 12px
+				height: 12px
+				border-radius: 50%
+				background-color: #e0bdbd
+				margin-top: 8px
+	.texr
+		display: none
+
+hr
+	max-width: 791px
+	height: 1px
+	background-color: #E8E8E8
+
+.simp
+	color: #762D1A
+	font-size: 15px
+	font-weight: 400
+	margin-top: 30px
+
+.ros
+	background-color: #f3f3f3
+	border-left: 10px solid orange
+	max-width: 1388px
+	.wrap1
+		padding: 41px 81px
+		img
+			padding: 30px 10px
+
+@media screen and ( max-width: 1440px )
+	.ros
+		background-color: #f3f3f3
+		border-left: 10px solid orange
+		max-width: 1388px
+		.wrap1
+			padding: 31px 81px
+			img
+				padding: 20px 10px
+				width: 150px
+
+	.descr1
+		display: none
+
+	.descr2
+		display: none
+
+	.rezon
+		.d
+			.d1
+				img
+					max-width: 120%
+					height: 701px
+					object-fit: cover
+					position: relative
+					object-position: top right
+					display: block
+					margin-left: -50px
+					margin-top: 10px
+
+@media screen and ( max-width: 1200px )
+	.main
+		display: block
+		.func
+			font-size: 25px
+		.asimg
+			margin-top: 40px
+	.descr6
+		display: block
+		color: #494948
+		font-size: 17.8px
+		padding: 15px 24px
+		.span1
+			color: #FFF
+			font-size: 15px
+	.descr7
+		display: block
+		color: #181843
+		font-size: 15px
+		margin: 30px 0px
+	hr
+		display: none
+	.simp
+		display: none
+	.rezon
+		.d
+			.d1
+				img
+					max-width: 120%
+					height: 451px
+					object-fit: cover
+					position: relative
+					object-position: top right
+					display: block
+					margin-left: -50px
+					margin-top: 10px
+@media screen and ( max-width: 900px )
+	.ros
+		background-color: #f3f3f3
+		border-left: 10px solid orange
+		max-width: 1388px
+		.wrap1
+			padding: 15px 61px
+			img
+				padding: 15px 10px
+				width: 100px
+	.wrap
+		// display: block
+		.catalog
+			width: 100%
+
+	.rezon
+		.d
+			.d2
+				padding: 0px 10px
+		ul
+			margin-top: 60px
+			li
+				margin-top: -30px
+				width: 350px
+				font-size: 14px
+		.texr
+			display: block
+			color: #762D1A
+			font-size: 16px
+			font-weight: 400
+			padding: 20px 42px
+	.video
+		width: 700px
+		margin-left: 80px
+	.rezon
+		.d
+			.d1
+				img
+					max-width: 120%
+					height: 370px
+					object-fit: cover
+					position: relative
+					object-position: top right
+					display: block
+					margin-left: 10px
+					margin-top: 10px
+@media screen and ( max-width: 780px )
+	.video
+		width: 500px
+		margin-left: 50px
+@media screen and ( max-width: 780px )
+	.video
+		width: 450px
+		margin-left: 20px
+@media screen and ( max-width: 580px )
+	.ros
+		background-color: #f3f3f3
+		border-left: 10px solid orange
+		max-width: 1388px
+		.wrap1
+			padding: 10px 41px
+			img
+				padding: 10px 10px
+				width: 90px
