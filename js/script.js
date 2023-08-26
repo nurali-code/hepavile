@@ -1,8 +1,8 @@
-$(document).ready(function(){
-    $('.btn1').on("click",function(){
-      $('.overlay').show(1000);
-    });
-    
-    $('.popup-close').on("click",function(){
-     $('.overlay').hide(1000);
-    })})
+var scene = document.getElementById('scene');
+		var parallaxInstance = new Parallax(scene, {
+			relativeInput: true
+		});
+var scene2 = document.getElementById('scene2');
+		var parallaxInstance = new Parallax(scene2, {
+			relativeInput: true
+		});

@@ -8,6 +8,7 @@
 	padding: 100px 0 0
 	position: relative
 	z-index: 1
+	overflow: hidden
 	&-content
 		position: static
 		z-index: unset
@@ -27,7 +28,7 @@
 		position: absolute
 		right: 0
 		top: -50px
-		max-width: 600px
+		max-width: 45%
 
 	&__link
 		padding: 22px 30px
@@ -37,30 +38,69 @@
 			text-decoration: underline
 
 	&-bg
+		pointer-events: none
 		position: absolute
 		top: 0
-		left: 0
 		z-index: 1
 		width: 1100px
-		left: 50%
-		transform: translateX(-50%)
+		left: 18%
 		height: 100%
 		img
 			position: absolute
 			&:nth-of-type(1)
-				left: -40%
-				top: 8%
-				// background-color: red
+				left: -40% !important
+				top: 8% !important
 			&:nth-of-type(2)
-				left: 20%
-				top: -5%
+				left: 20% !important
+				top: -8% !important
+				opacity: .8
 			&:nth-of-type(3)
 				width: 300px
-				left: 18%
-				top: 35%
+				left: 18% !important
+				top: 35% !important
+				opacity: .6
 			&:nth-of-type(4)
-				right: -20%
-				top: 40%
+				left: auto !important
+				right: -10% !important
+				top: 40% !important
+
+		span
+			display: inline-block
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background-color: $prime
+			position: absolute
+			&:nth-of-type(1)
+				width: 9px
+				height: 9px
+				left: -15% !important
+				top: 17% !important
+			&:nth-of-type(2)
+				width: 18px
+				height: 18px
+				left: 50% !important
+				top: 10% !important
+			&:nth-of-type(3)
+				width: 10px
+				height: 10px
+				left: 105% !important
+				top: 14% !important
+			&:nth-of-type(4)
+				width: 18px
+				height: 18px
+				left: 0 !important
+				top: 55% !important
+			&:nth-of-type(5)
+				width: 9px
+				height: 9px
+				left: 30% !important
+				top: 45% !important
+			&:nth-of-type(6)
+				width: 10px
+				height: 10px
+				left: 100% !important
+				top: 54% !important
 
 .info
 	padding: 70px 0 0
@@ -146,67 +186,157 @@
 	display: none
 
 .reazon
-	background-color: #f3f3f3
-	padding: 0
-	margin-bottom: 100px
+	position: relative
+	overflow: hidden
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		height: 90%
+		background-color: #EFEFEF
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+	
 	.container
 		position: relative
 		top: 100px
+		z-index: 1
 
-	.wrap
-		justify-content: start
-		gap: 15px
-		margin-top: 25px
+	.title
+		.wrap
+			justify-content: start
+			gap: 15px
+			margin-top: 25px
+
+	&-info
+		align-items: stretch
+		flex-wrap: nowrap
+		gap: 0 !important
+
+	&-img
+		max-width: 25%
+		background: linear-gradient(215deg, #F3EA88 2.26%, #D3C95E 97.77%)
+		img
+			height: 100%
+			width: 140%
+			max-width: unset
+			position: relative
+			left: -20%
+			z-index: 1
+			object-fit: contain
+			object-position: center bottom
 
 	&-content
+		background-color: #F7F7F7
+		padding: 70px 80px
+		max-width: 75%
 		.heading
 			span
 				display: block
-				color: #E1D4CD
 				font-size: 28px
+				line-height: 36px
 				font-style: normal
 				font-weight: 400
-				line-height: 22px
 				letter-spacing: 0.28px
 				text-transform: uppercase
+				color: #494948
+				&:nth-of-type(1)
+					color: #E1D4CD
 				&:nth-of-type(2)
-					ont-size: 33px
+					font-size: 33px
 					font-style: normal
 					font-weight: 800
-					line-height: 22px
 					letter-spacing: 0.33px
 					text-transform: uppercase
 				&:nth-of-type(3)
-					ont-size: 33px
+					font-size: 42px
 					font-style: normal
 					font-weight: 800
-					line-height: 22px
 					letter-spacing: 0.33px
 					text-transform: uppercase
+
+		.text
+			color: #13132C
+			font-size: 16px
+			font-style: normal
+			font-weight: 300
+			line-height: 22px
+			letter-spacing: 0.16px
+			max-width: 65%
 
 	ul
 		display: flex
 		flex-wrap: wrap
-		margin-top: 60px
-		gap: 45px
+		margin: 60px 0 50px
+		gap: 40px 3% 
 		li
-			width: 190px
+			width: 30%
 			color: #181843
 			font-size: 14px
+			position: relative
+			z-index: 1
 			&::before
 				content: ''
 				display: inline-block
 				width: 12px
 				height: 12px
+				position: absolute
+				left: 0
 				border-radius: 50%
 				background-color: #e0bdbd
-				margin-top: 8px
+				top: 50%
+				transform: translateY(-50%)
 
 	.simp
+		padding: 30px 0 0
+		border-top: 1px solid #E8E8E8
 		color: #762D1A
 		font-size: 15px
+		line-height: 18px
 		font-weight: 400
-		margin-top: 30px
+
+	&-bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+
+		img
+			position: absolute
+			&:nth-of-type(1)
+				width: 600px
+				left: 80% !important
+				top: 1% !important
+			&:nth-of-type(2)
+				width: 400px
+				left: -14% !important
+				top: 20% !important
+
+		span
+			display: inline-block
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background-color: $prime
+			position: absolute
+			&:nth-of-type(1)
+				width: 12px
+				height: 12px
+				left: 3% !important
+				top: 16% !important
+			&:nth-of-type(2)
+				right: 18% !important
+				left: auto !important
+				top: 1% !important
+			&:nth-of-type(3)
+				top: auto !important
+				right: -2% !important
+				left: auto !important
+				bottom: 150px !important
 
 .buy
 	.content
@@ -229,35 +359,24 @@
 		bottom: 0
 		max-width: 350px
 
-@media screen and ( max-width: 1440px )
-	.ros
-		background-color: #f3f3f3
-		border-left: 10px solid orange
-		max-width: 1388px
-		.wrap1
-			padding: 31px 81px
-			img
-				padding: 20px 10px
-				width: 150px
+@media screen and ( max-width: 1500px )
+	.main
+		&-content
+			padding: 60px 0
 
-	.descr1
-		display: none
+	.reazon 
+		&-content 
+			padding: 60px 50px
 
-	.descr2
-		display: none
-
-	.rezon
-		.d
-			.d1
-				img
-					max-width: 120%
-					height: 701px
-					object-fit: cover
-					position: relative
-					object-position: top right
-					display: block
-					margin-left: -50px
-					margin-top: 10px
+		ul 
+			gap: 30px 3%
+			margin: 50px 0 40px
+			li 
+				width: 31%
+				padding-left: 20px
+				&::before
+					width: 9px	
+					height: 9px	
 
 @media screen and ( max-width: 1200px )
 	.main

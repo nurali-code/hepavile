@@ -69,11 +69,17 @@
 			</div>
 		</section>
 
-		<div class="main-bg">
-			<img src="img/ellipse-1.svg" alt="ellipse">
-			<img src="img/ellipse-2.svg" alt="ellipse">
-			<img src="img/ellipse-2.svg" alt="ellipse">
-			<img src="img/ellipse-1.svg" alt="ellipse">
+		<div class="main-bg" id="scene">
+			<img data-depth=".7" src="img/ellipse-1.svg" alt="ellipse">
+			<img data-depth=".5" src="img/ellipse-2.svg" alt="ellipse">
+			<img data-depth=".6" src="img/ellipse-2.svg" alt="ellipse">
+			<img data-depth=".8" src="img/ellipse-1.svg" alt="ellipse">
+			<span data-depth=".2"></span>
+			<span data-depth=".5"></span>
+			<span data-depth=".3"></span>
+			<span data-depth=".6"></span>
+			<span data-depth=".3"></span>
+			<span data-depth=".2"></span>
 		</div>
 	</main>
 
@@ -145,17 +151,9 @@
 					<span class="tag">Вирусы</span>
 					<span class="tag">Наследсвенные заболевания</span>
 				</p>
-
-				<p class="descr7">
-					Еще одна особенность печени - отсутствие болевых
-					рецепторов, вследствие чего она практически не подает
-					сигналов о болезни, в буквальном смысле «страдая молча».
-					Когда появляются симптомы, ситуация с печенью близка
-					к критической.
-				</p>
 			</div>
 
-			<div class="reazon-info">
+			<div class="reazon-info wrap">
 				<div class="reazon-img">
 					<img src="img/Women.png" alt="Women">
 				</div>
@@ -188,6 +186,14 @@
 						гастроэнтерологу-гепатологу!
 					</p>
 				</div>
+			</div>
+
+			<div class="reazon-bg" id="scene2">
+				<img data-depth="1" src="img/ellipse-1.svg" alt="ellipse">
+				<img data-depth="1" src="img/ellipse-2.svg" alt="ellipse">
+				<span data-depth=".2"></span>
+				<span data-depth=".5"></span>
+				<span data-depth=".1"></span>
 			</div>
 		</div>
 	</section>
@@ -235,8 +241,9 @@
 		</div>
 	</footer>
 
-	<!-- <script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/script.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+	<script src="js/script.js"></script>
 </body>
 
 </html>
