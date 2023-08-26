@@ -2,7 +2,6 @@
 @import 'elements'
 @import 'header'
 @import 'vitamins'
-@import 'footer'
 
 .main
 	padding: 100px 0 0
@@ -338,7 +337,7 @@
 				top: auto !important
 				right: -2% !important
 				left: auto !important
-				bottom: 150px !important
+				bottom: 250px !important
 
 .buy
 	.content
@@ -361,6 +360,9 @@
 		bottom: 0
 		width: 350px
 		max-width: 33%
+
+@import 'modal'
+@import 'footer'
 
 @media screen and ( max-width: 1500px )
 	.main
@@ -389,6 +391,7 @@
 	.main
 		h1
 			margin: 0 0 10px
+
 		&__text
 			max-width: 500px
 			margin: 0 0 30px
@@ -398,19 +401,41 @@
 
 		&-content
 			padding: 30px 0 0
+
 		&__img
-			position: static
-			max-width: 100%
+			position: relative
+			max-width: 105%
 			display: block
 			margin-bottom: 20px
+			top: auto
+			right: 5%
+
 		&-bg
 			left: 4%
+			img
+				&:nth-of-type(1)
+					left: -38% !important
+					top: 8% !important
+					width: 200px
+				&:nth-of-type(2)
+					left: 65% !important
+					top: -1% !important
+					width: 200px
+				&:nth-of-type(3)
+					width: 150px
+					left: -17% !important
+					top: 42% !important
+				&:nth-of-type(4)
+					width: 180px
+					top: 38% !important
+					right: -14% !important
+
 			span
 				&:nth-of-type(1)
 					width: 6px
 					height: 6px
 					left: 3% !important
-					top: 21% !important
+					top: 23% !important
 
 				&:nth-of-type(2)
 					width: 5px
@@ -421,8 +446,26 @@
 				&:nth-of-type(3)
 					width: 3px
 					height: 3px
-					left: 90% !important
+					left: 95% !important
 					top: 16% !important
+
+				&:nth-of-type(4)
+					width: 5px
+					height: 5px
+					left: 5% !important
+					top: 48% !important
+
+				&:nth-of-type(5)
+					width: 4px
+					height: 4px
+					left: 61% !important
+					top: 45% !important
+
+				&:nth-of-type(6)
+					width: 4px
+					height: 4px
+					left: 85% !important
+					top: 60% !important
 
 	.info
 		&::before
@@ -507,6 +550,33 @@
 			padding-top: 20px
 			font-size: 14px
 
+		&-bg
+			span
+				width: 4px !important
+				height: 4px !important
+				&:nth-of-type(1)
+					left: 12% !important
+					top: -4% !important
+				&:nth-of-type(2)
+					left: 91% !important
+					top: 21% !important
+				&:nth-of-type(3)
+					bottom: auto !important
+					top: 42% !important
+					right: 20% !important
+
+			img
+				&:nth-of-type(1)
+					width: 200px
+					left: -25% !important
+					top: -10% !important
+
+				&:nth-of-type(2)
+					width: 200px
+					left: 70% !important
+					top: 7% !important
+					
+
 	.buy
 		&__img
 			right: -10px
@@ -526,6 +596,7 @@
 		padding: 80px 0 0
 		&-content
 			padding: 0
+
 		&__text
 			font-size: 14px
 			font-weight: 400
@@ -535,9 +606,11 @@
 			padding: 14px 0 13px 8px
 
 	.info
+		h2
+			max-width: 237px
 		&::before
-			height: 64%
-			bottom: 56%
+			height: 46%
+			bottom: 61%
 		h2
 			margin-bottom: 19px
 		&__img

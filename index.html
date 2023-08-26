@@ -9,10 +9,10 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
 		rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" />
 
-	<link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -42,7 +42,7 @@
 					<img src="img/main-mob.png" loading="lazy" alt="img" class="main__img">
 				</picture>
 				<a href="#" class="btn">Где купить?</a>
-				<button class="main__link">Инсрукция по применению</button>
+				<button class="main__link" id="btn_open">Инсрукция по применению</button>
 			</div>
 		</section>
 
@@ -252,8 +252,25 @@
 		</div>
 	</footer>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<button class="modal-close" id="modal_close">&#x2715;</button>
+			<h2>Споспоб применения</h2>
+			<p class="modal__info">
+				<b>Взрослым по 1 капсуле в день во время еды.</b>
+			</p>
+			<p>
+				Продолжительность приема - <br>
+				<b>не менее 1 месяца.</b>
+				<br>
+				<br>
+				Курс лечения - <b>3-6 месяцев</b>.
+			</p>
+			<img loading="lazy" class="modal__img" src="img/box.png" alt="box">
+		</div>
+	</div>
 
+	<script src="js/parallax.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 
