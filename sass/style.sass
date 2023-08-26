@@ -117,7 +117,7 @@
 		bottom: 28%
 		transform: translateX(-50%)
 		left: 50%
-		border-radius: 50%
+		border-radius: 0 0 50% 50%
 		background-color: #EEE
 
 	.container
@@ -181,12 +181,6 @@
 	font-style: normal
 	font-weight: 600
 
-.descr6
-	color: #181843
-	font-size: 35px
-	width: 100px
-	display: none
-
 .reazon
 	position: relative
 	overflow: hidden
@@ -231,43 +225,46 @@
 			object-fit: contain
 			object-position: center bottom
 
+	.heading
+		span
+			display: block
+			font-size: 28px
+			line-height: 36px
+			font-style: normal
+			font-weight: 400
+			letter-spacing: 0.28px
+			text-transform: uppercase
+			color: #494948
+			&:nth-of-type(1)
+				color: #E1D4CD
+			&:nth-of-type(2)
+				font-size: 33px
+				font-style: normal
+				font-weight: 800
+				letter-spacing: 0.33px
+				text-transform: uppercase
+			&:nth-of-type(3)
+				font-size: 42px
+				font-style: normal
+				font-weight: 800
+				letter-spacing: 0.33px
+				text-transform: uppercase
+
+	.text
+		color: #13132C
+		font-size: 16px
+		font-style: normal
+		font-weight: 300
+		line-height: 22px
+		letter-spacing: 0.16px
+		max-width: 65%
+		&.mob
+			display: none
+
 	&-content
 		background-color: #F7F7F7
 		padding: 70px 80px
 		max-width: 75%
-		.heading
-			span
-				display: block
-				font-size: 28px
-				line-height: 36px
-				font-style: normal
-				font-weight: 400
-				letter-spacing: 0.28px
-				text-transform: uppercase
-				color: #494948
-				&:nth-of-type(1)
-					color: #E1D4CD
-				&:nth-of-type(2)
-					font-size: 33px
-					font-style: normal
-					font-weight: 800
-					letter-spacing: 0.33px
-					text-transform: uppercase
-				&:nth-of-type(3)
-					font-size: 42px
-					font-style: normal
-					font-weight: 800
-					letter-spacing: 0.33px
-					text-transform: uppercase
-
-		.text
-			color: #13132C
-			font-size: 16px
-			font-style: normal
-			font-weight: 300
-			line-height: 22px
-			letter-spacing: 0.16px
-			max-width: 65%
 
 	ul
 		display: flex
@@ -299,6 +296,8 @@
 		font-size: 15px
 		line-height: 18px
 		font-weight: 400
+		&.mob
+			display: none
 
 	&-bg
 		position: absolute
@@ -350,7 +349,7 @@
 		.wrap
 			margin: 0 auto 0 0
 			max-width: 67%
-			padding: 30px 55px
+			padding: 30px 45px 30px 50px
 			justify-content: flex-start
 			gap: 26px 28px
 			img
@@ -360,7 +359,8 @@
 		position: absolute
 		right: 10px
 		bottom: 0
-		max-width: 350px
+		width: 350px
+		max-width: 33%
 
 @media screen and ( max-width: 1500px )
 	.main
@@ -433,7 +433,7 @@
 			gap: 2%
 			// display: block
 			align-items: stretch
-			max-width: 600px
+			max-width: 700px
 			margin: 0 auto
 		&__img
 			width: 340px
@@ -444,7 +444,7 @@
 			position: static
 			width: 350px
 			max-width: 49%
-			margin: 0 auto 20px
+			margin: 0 auto 10px
 
 	.features
 		max-width: 700px
@@ -464,38 +464,62 @@
 		&-content
 			width: calc( 100% - 170px )
 			max-width: unset
-			.wrap
-				// display: none
-			.heading
-				position: absolute
-				left: 17px
-				top: 20px
-				span
-					line-height: 29px
-					font-size: 21px
-					&:nth-of-type(1)
-						color: #fff
-					&:nth-of-type(2)
-						font-size: 25px
-					&:nth-of-type(3)
-						font-size: 32px
-			.text
-				display: none
+			padding: 40px 50px
+
+		.heading
+			position: absolute
+			left: 17px
+			top: 20px
+			span
+				line-height: 29px
+				font-size: 21px
+				&:nth-of-type(1)
+					color: #fff
+				&:nth-of-type(2)
+					font-size: 25px
+				&:nth-of-type(3)
+					font-size: 32px
+		.text
+			max-width: 100%
+			font-size: 13px
+			line-height: 19px
 
 		ul
 			display: block
-			margin: 0 0 20px
+			margin: 20px 0
 			li
+				font-size: 12px
 				width: 100%
-				padding: 3.5px 0 3.5px 20px
+				padding: 3.5px 0 3.5px 17px
+				&::before
+					width: 7px
+					height: 7px
 
-		&-img 
+		&-img
 			width: 170px
+			min-width: 170px
 			display: flex
 			align-items: end
-			padding-top: 20px
-			img 
+			img
 				height: 80%
+
+		.simp
+			padding-top: 20px
+			font-size: 14px
+
+	.buy
+		&__img
+			right: -10px
+			max-width: 36%
+		.title
+			margin-bottom: 20px
+		.content
+			border-width: 5px
+			.wrap
+				padding: 20px
+				gap: 20px
+				img
+					max-width: 120px
 
 @media screen and ( max-width: 700px )
 	.main
@@ -510,19 +534,41 @@
 			font-size: 11px
 			padding: 14px 0 13px 8px
 
-		.info
-			.wrap
-				display: block
+	.info
+		&::before
+			height: 64%
+			bottom: 56%
+		h2
+			margin-bottom: 19px
+		&__img
+			width: 190px
+			margin-bottom: 23px
+		.wrap
+			display: block
 
-			p
-				padding: 15px 20px 16px
-				font-size: 14px
-				line-height: 18px
-				max-width: 100%
+		p
+			padding: 15px 20px 16px
+			font-size: 14px
+			line-height: 18px
+			max-width: 100%
+			margin-bottom: 5px
 
 	.features
+		padding: 60px 0
 		.container
 			padding: 0
+
+		h4
+			font-size: 14px
+			line-height: 23px
+			margin-bottom: 5px
+			span
+				font-size: 12px
+				line-height: 23px
+
+		p
+			font-size: 13px
+			line-height: 18px
 
 		&-item
 			padding: 25px 0 0
@@ -534,3 +580,86 @@
 			margin-top: 25px
 			position: static
 			height: 120px
+
+	.reazon
+		padding: 54px 0 0
+		.container
+			padding: 0
+		.title
+			.wrap
+				gap: 5px
+				margin: 10px 0 0
+			span
+				padding: 5px 9px
+				font-size: 10px
+				line-height: 21px
+
+		.text
+			font-size: 13px
+			font-style: normal
+			font-weight: 300
+			line-height: 19px
+			margin: 30px 0 0
+
+		&-info
+			flex-wrap: wrap
+		&-img
+			width: 125px
+			min-width: 125px
+			min-height: 280px
+			img
+				width: 130%
+				left: -15%
+		.text
+			display: none
+			&.mob
+				display: block
+		&-content
+			padding: 18px 10px 18px
+			display: flex
+			align-items: center
+			width: calc( 100% - 125px )
+
+			.heading
+				span
+					line-height: 20px
+					font-size: 15px
+					letter-spacing: 0px !important
+					&:nth-of-type(1)
+						color: #fff
+					&:nth-of-type(2)
+						font-size: 18px
+					&:nth-of-type(3)
+						font-size: 21.8px
+
+		ul
+			margin: 0
+			li
+				font-size: 11px
+				line-height: 14px
+
+		.simp
+			font-size: 11px
+			padding: 15px 18px
+			line-height: 16px
+			display: none
+			background-color: #EFEFEF
+			&.mob
+				display: block
+				width: 100%
+
+	.buy
+		padding: 50px 0
+		.container
+			padding: 0
+		.content
+			border: none
+			.wrap
+				gap: 25px 18px
+				max-width: 100%
+				img
+					max-height: 25px
+					max-width: 35%
+
+		&__img
+			display: none
