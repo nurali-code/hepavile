@@ -43,7 +43,8 @@
 		top: 0
 		z-index: 1
 		width: 1100px
-		left: 18%
+		max-width: 92%
+		left: calc((100% - 1100px)/2)
 		height: 100%
 		img
 			position: absolute
@@ -112,6 +113,7 @@
 		width: 100vw
 		height: 140%
 		position: absolute
+		z-index: -1
 		bottom: 28%
 		transform: translateX(-50%)
 		left: 50%
@@ -188,20 +190,20 @@
 .reazon
 	position: relative
 	overflow: hidden
+	padding-bottom: 17px
 	&::before
 		content: ''
 		display: block
 		width: 100%
-		height: 90%
+		height: 77%
 		background-color: #EFEFEF
 		position: absolute
 		top: 0
 		left: 0
 		z-index: -1
-	
+
 	.container
 		position: relative
-		top: 100px
 		z-index: 1
 
 	.title
@@ -224,6 +226,7 @@
 			max-width: unset
 			position: relative
 			left: -20%
+			bottom: 0
 			z-index: 1
 			object-fit: contain
 			object-position: center bottom
@@ -270,7 +273,7 @@
 		display: flex
 		flex-wrap: wrap
 		margin: 60px 0 50px
-		gap: 40px 3% 
+		gap: 40px 3%
 		li
 			width: 30%
 			color: #181843
@@ -314,7 +317,7 @@
 			&:nth-of-type(2)
 				width: 400px
 				left: -14% !important
-				top: 20% !important
+				top: 18% !important
 
 		span
 			display: inline-block
@@ -364,117 +367,170 @@
 		&-content
 			padding: 60px 0
 
-	.reazon 
-		&-content 
+		&-bg
+			width: 940px
+			left: calc((100% - 940px)/2)
+
+	.reazon
+		&-content
 			padding: 60px 50px
 
-		ul 
+		ul
 			gap: 30px 3%
 			margin: 50px 0 40px
-			li 
+			li
 				width: 31%
 				padding-left: 20px
 				&::before
-					width: 9px	
-					height: 9px	
+					width: 9px
+					height: 9px
 
-@media screen and ( max-width: 1200px )
+@media screen and ( max-width: 1100px )
 	.main
-		display: block
-		.func
-			font-size: 25px
-		.asimg
-			margin-top: 40px
-	.descr6
-		display: block
-		color: #494948
-		font-size: 17.8px
-		padding: 15px 24px
-		.span1
-			color: #FFF
-			font-size: 15px
-	.descr7
-		display: block
-		color: #181843
-		font-size: 15px
-		margin: 30px 0px
-	hr
-		display: none
-	.simp
-		display: none
-	.rezon
-		.d
-			.d1
-				img
-					max-width: 120%
-					height: 451px
-					object-fit: cover
-					position: relative
-					object-position: top right
-					display: block
-					margin-left: -50px
-					margin-top: 10px
-@media screen and ( max-width: 900px )
-	.ros
-		background-color: #f3f3f3
-		border-left: 10px solid orange
-		max-width: 1388px
-		.wrap1
-			padding: 15px 61px
-			img
-				padding: 15px 10px
-				width: 100px
-	.wrap
-		// display: block
-		.catalog
-			width: 100%
+		h1
+			margin: 0 0 10px
+		&__text
+			max-width: 500px
+			margin: 0 0 30px
 
-	.rezon
-		.d
-			.d2
-				padding: 0px 10px
-		ul
-			margin-top: 60px
-			li
-				margin-top: -30px
-				width: 350px
-				font-size: 14px
-		.texr
+		.container
+			max-width: 700px
+
+		&-content
+			padding: 30px 0 0
+		&__img
+			position: static
+			max-width: 100%
 			display: block
-			color: #762D1A
-			font-size: 16px
+			margin-bottom: 20px
+		&-bg
+			left: 4%
+			span
+				&:nth-of-type(1)
+					width: 6px
+					height: 6px
+					left: 3% !important
+					top: 21% !important
+
+				&:nth-of-type(2)
+					width: 5px
+					height: 5px
+					left: 93% !important
+					top: 5% !important
+
+				&:nth-of-type(3)
+					width: 3px
+					height: 3px
+					left: 90% !important
+					top: 16% !important
+
+	.info
+		&::before
+			height: 100%
+			bottom: 50%
+		.wrap
+			padding: 0
+			gap: 2%
+			// display: block
+			align-items: stretch
+			max-width: 600px
+			margin: 0 auto
+		&__img
+			width: 340px
+			max-width: 100%
+			display: block
+			margin: 0 auto 33px
+		p
+			position: static
+			width: 350px
+			max-width: 49%
+			margin: 0 auto 20px
+
+	.features
+		max-width: 700px
+		margin: 0 auto
+		.container
+		.wrap
+			display: block
+
+		&-item
+			width: 100%
+			margin-bottom: 10px
+
+	.reazon
+		&-info
+			position: relative
+			z-index: 111
+		&-content
+			width: calc( 100% - 170px )
+			max-width: unset
+			.wrap
+				// display: none
+			.heading
+				position: absolute
+				left: 17px
+				top: 20px
+				span
+					line-height: 29px
+					font-size: 21px
+					&:nth-of-type(1)
+						color: #fff
+					&:nth-of-type(2)
+						font-size: 25px
+					&:nth-of-type(3)
+						font-size: 32px
+			.text
+				display: none
+
+		ul
+			display: block
+			margin: 0 0 20px
+			li
+				width: 100%
+				padding: 3.5px 0 3.5px 20px
+
+		&-img 
+			width: 170px
+			display: flex
+			align-items: end
+			padding-top: 20px
+			img 
+				height: 80%
+
+@media screen and ( max-width: 700px )
+	.main
+		padding: 80px 0 0
+		&-content
+			padding: 0
+		&__text
+			font-size: 14px
 			font-weight: 400
-			padding: 20px 42px
-	.video
-		width: 700px
-		margin-left: 80px
-	.rezon
-		.d
-			.d1
-				img
-					max-width: 120%
-					height: 370px
-					object-fit: cover
-					position: relative
-					object-position: top right
-					display: block
-					margin-left: 10px
-					margin-top: 10px
-@media screen and ( max-width: 780px )
-	.video
-		width: 500px
-		margin-left: 50px
-@media screen and ( max-width: 780px )
-	.video
-		width: 450px
-		margin-left: 20px
-@media screen and ( max-width: 580px )
-	.ros
-		background-color: #f3f3f3
-		border-left: 10px solid orange
-		max-width: 1388px
-		.wrap1
-			padding: 10px 41px
-			img
-				padding: 10px 10px
-				width: 90px
+
+		&__link
+			font-size: 11px
+			padding: 14px 0 13px 8px
+
+		.info
+			.wrap
+				display: block
+
+			p
+				padding: 15px 20px 16px
+				font-size: 14px
+				line-height: 18px
+				max-width: 100%
+
+	.features
+		.container
+			padding: 0
+
+		&-item
+			padding: 25px 0 0
+			margin-bottom: 5px
+			h4, p
+				padding: 0 20px
+
+		&-img
+			margin-top: 25px
+			position: static
+			height: 120px
